@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+@layer utilities {
+    .clip-triangle {
+        clip-path: polygon(0 0, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+    }
+}
