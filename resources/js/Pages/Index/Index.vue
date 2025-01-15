@@ -9,16 +9,15 @@
             <div>
                 <Vision />
             </div>
-            <!-- <div>
-                <Accueil />
+            <div>
+                <statistic />
             </div>
-            
             <div>
                 <Notre_Equipe />
             </div>
             <div>
                <FAQ :faqs="faqs" />
-            </div>        
+            </div>
             <div>
                <Partner :partners="partners" />
             </div>
@@ -30,12 +29,13 @@
             </div>
             <div>
                 <Feedback :feedbacks="feedbacks" />
-            </div> -->
+            </div>
         </div>
 </template>
 
 <script>
 import MainLayout from '@/Layouts/MainLayout.vue';
+import Accueil from './Accueil.vue';
 import Presentation from './Presentation.vue';
 import Vision from './Vision.vue';
 import Project from './Project.vue';
@@ -43,7 +43,6 @@ import Notre_Equipe from './Notre_Equipe.vue';
 import FAQ from './FAQ.vue';
 import Partner from './Partner.vue';
 import Realisation from './Realisation.vue';
-import Accueil from './Accueil.vue';
 import Contact from './Contact.vue';
 import Feedback from './Feedback.vue';
 
