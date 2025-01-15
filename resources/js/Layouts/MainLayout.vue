@@ -10,22 +10,22 @@
                 <div class="flex flex-row justify-center text-xl items-center space-x-10 pr-3">
                   <ul class="tracking-wide flex gap-x-8 items-center ">
                     <li class="hover:scale-125 duration-300 py-1 hover:text-rose-500">
-                      <Link href="/" class="cursor-pointer">ACCUEIL</Link>
+                      <Link href="/" class="cursor-pointer">Accueil</Link>
                     </li>
                     <li class="hover:scale-125 duration-300 py-1 hover:text-rose-500">
-                      <Link href="" class="cursor-pointer">NOS PROJETS</Link>
+                      <Link href="" class="cursor-pointer">Nos activités</Link>
                     </li>
                     <li class="hover:scale-125 duration-300 py-1 hover:text-rose-500">
-                      <Link href="" class="cursor-pointer">BLOG</Link>
+                      <Link href="" class="cursor-pointer">Communautés Y2C</Link>
                     </li>
                     <li class="hover:scale-125 duration-300 py-1 hover:text-rose-500">
-                      <Link href="" class="cursor-pointer">A PROPOS</Link>
+                      <Link href="" class="cursor-pointer">A propos</Link>
                     </li>
-                    <div class="hover:scale-105 duration-300">
-                        <Link href="/Login"class="hover:bg-rose-500 bg-rose-600 text-white font-bold px-9 py-3 cursor-pointer">CONNEXION</Link>
+                    <div class="hover:scale-105 duration-300 -mr-3">
+                        <Link href="/Login"class="hover:bg-rose-500 bg-rose-600 text-white font-bold px-9 py-3 cursor-pointer">Connexion</Link>
                     </div>
                     <div>
-                        <img src="images/settings.svg" alt="setting gear" class="w-12">
+                        <img src="images/settings.svg" alt="setting gear" class="w-10 mr-3">
                     </div>
                   </ul>                                        
                 </div>

@@ -9,9 +9,10 @@
             <div>
                 <Vision />
             </div>
-            <div>
-                <Project :statistic="statistic" />
+            <!-- <div>
+                <Accueil />
             </div>
+            
             <div>
                 <Notre_Equipe />
             </div>
@@ -29,7 +30,7 @@
             </div>
             <div>
                 <Feedback :feedbacks="feedbacks" />
-            </div>
+            </div> -->
         </div>
 </template>
 
@@ -45,6 +46,7 @@ import Realisation from './Realisation.vue';
 import Accueil from './Accueil.vue';
 import Contact from './Contact.vue';
 import Feedback from './Feedback.vue';
+
 export default {
     name: "Index",
     layout:MainLayout, 
@@ -60,6 +62,7 @@ export default {
     },
 
     components: {
+        Accueil,
         Presentation,
         Vision,
         Project,
@@ -67,7 +70,6 @@ export default {
         FAQ,
         Partner,
         Realisation,
-        Accueil,
         Contact,
         Feedback,
     },
