@@ -1,8 +1,11 @@
 <template>
     <div class="flex flex-col mb-28">
         <h1 class="text-rose-500 text-6xl font-black flex justify-center items-center">Feedbaks</h1>
+        <p class="text-center text-xl mb-8 mt-3">Si vous avez des questions, des commentaires ou des avis concernant la plateforme, son organisation ou tout autre sujet,<br>
+           n'hésitez pas à vous exprimer ci-dessous. Voutre feedback est précieux et nous aide à améliorer nos services et à mieux répondre à vos attentes.<br>
+           Nous vous remercions de prendre le temps de partager vos réflexions aven nous.</p>
         <div class="flex justify-end mr-20 mb-3">
-            <button @click="openModal" class="hover:scale-105 hover:bg-rose-500 duration-300 bg-rose-600 text-xl text-white font-bold px-6 py-2">Add feedback</button>
+            <button @click="openModal" class="hover:scale-105 hover:bg-rose-500 duration-300 bg-rose-600 text-xl text-white font-bold px-6 py-2 mb-3">Ajouter une feedback</button>
         </div>
         <div v-for="(feedback, index) in feedbacks" class="text-xl flex justify-between items-center border-t-2 border-gray-300 mx-20 pt-5 mb-6">
             <div>

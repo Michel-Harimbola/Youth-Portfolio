@@ -10,7 +10,7 @@
                 <Vision />
             </div>
             <div>
-                <statistic />
+                <Project :statistic="statistic" />
             </div>
             <div>
                 <Notre_Equipe />

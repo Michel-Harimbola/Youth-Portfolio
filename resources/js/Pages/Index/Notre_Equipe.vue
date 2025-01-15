@@ -4,8 +4,8 @@
             <div class="align-self-start">
                 <h1 class="text-6xl font-bold"> <span class="text-blue-950">Rencontrez</span> <span class="text-rose-500">notre équipe</span></h1>
             </div>
-            <p class="text-center text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit ab dignissimos aut corporis eum!<br>
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+            <p class="text-center text-xl">Pourvu que c'est une association, elle comporte beaucoup de participants qui jouent<br>
+               chacunes des rôles importantes pour notre association.</p>
         </div>
 
         <div class="flex flex-row text-xl justify-between">

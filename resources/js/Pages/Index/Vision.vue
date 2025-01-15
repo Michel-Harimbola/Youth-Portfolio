@@ -34,7 +34,7 @@
             <div>
                 <img src="images/icons/Fusée.svg" alt="Fusée">
             </div>
-            <p class="text-center font-bold">Solidarité</p>
+            <p class="text-center font-bold">Collaboration</p>
         </div>
     </div>
 </template>

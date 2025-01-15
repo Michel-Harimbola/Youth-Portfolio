@@ -3,12 +3,8 @@
       <div>
         <div class="flex flex-col justify-center items-center gap-5 h-32">
           <div class="align-self-start">
-            <h1 class="text-5xl text-rose-500 font-black">Frequently Asked Questions</h1>
+            <h1 class="text-5xl text-rose-500 font-black">Questions fréquemment posées(FAQ)</h1>
           </div>
-          <p class="text-center text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit ab dignissimos aut corporis eum!<br>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit!
-          </p>
         </div>
       </div>
   

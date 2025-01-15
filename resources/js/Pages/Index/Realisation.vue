@@ -1,8 +1,8 @@
 <template>
     <div class="flex flex-col justify-center items-center space-y-7 mb-12">
         <h1 class="font-black text-6xl text-blue-950 ">Nos <span class="text-rose-600">réalisations</span></h1>
-        <p class="text-center text-xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, corporis! Assumenda facere possimus cum dolorum dignissimos <br> 
-           debitis facilis sed,harum incidunt voluptatibus mollitia modi sunt culpa tenetur suscipit.</p>
+        <p class="text-center text-xl">Afin d'avoir une environnement bien numérisé et évolué, <br> 
+           notre association s'occupe aussi des divers formations pour atteindres nos objectifs.</p>
     </div>
     <div class="flex justify-between mx-40">
         <div v-for="realisation in realisations" :key="realisation.id">
