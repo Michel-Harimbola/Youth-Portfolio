@@ -2,27 +2,27 @@
     <div :class="navClass">
       
         <!-- Navbar -->
-        <nav class="bg-white py-5 ">
+        <nav class="bg-white py-3 ">
             <div class="flex justify-between pl-20">
                 <div>
-                    <img src="images/YouthComputingblanc.svg" alt="Logo" class="w-14  bg-red-500 rounded-full" >
+                    <img src="images/YouthComputingblanc.svg" alt="Logo" class="w-14  bg-fuchsia rounded-full" >
                 </div>
-                <div class="flex flex-row justify-center text-xl items-center space-x-10 pr-3">
-                  <ul class="tracking-wide flex gap-x-8 items-center ">
-                    <li class="hover:scale-125 duration-300 py-1 hover:text-rose-500">
+                <div class="flex flex-row justify-center text-xl items-center pr-3">
+                  <ul class="tracking-wide flex gap-x-6 items-center ">
+                    <li class="hover:scale-110 duration-300 py-1 hover:text-fuchsia">
                       <Link href="/" class="cursor-pointer">Accueil</Link>
                     </li>
-                    <li class="hover:scale-125 duration-300 py-1 hover:text-rose-500">
+                    <li class="hover:scale-110 duration-300 py-1 hover:text-fuchsia">
                       <Link href="" class="cursor-pointer">Nos activités</Link>
                     </li>
-                    <li class="hover:scale-125 duration-300 py-1 hover:text-rose-500">
+                    <li class="hover:scale-110 duration-300 py-1 hover:text-fuchsia">
                       <Link href="" class="cursor-pointer">Communautés Y2C</Link>
                     </li>
-                    <li class="hover:scale-125 duration-300 py-1 hover:text-rose-500">
+                    <li class="hover:scale-110 duration-300 py-1 hover:text-fuchsia">
                       <Link href="" class="cursor-pointer">A propos</Link>
                     </li>
                     <div class="hover:scale-105 duration-300 -mr-3">
-                        <Link href="/Login"class="hover:bg-rose-500 bg-rose-600 text-white font-bold px-9 py-3 cursor-pointer">Connexion</Link>
+                        <Link href="/Login"class="bg-fuchsia text-white font-bold px-9 py-3 cursor-pointer">Connexion</Link>
                     </div>
                     <div>
                         <img src="images/settings.svg" alt="setting gear" class="w-10 mr-3">
@@ -40,12 +40,12 @@
 
     <!-- pied de la page -->
     <footer>
-        <div class="bg-blue-950 text-white flex justify-between px-20 pb-32 pt-24">
+        <div class="bg-bleu text-white flex justify-between px-20 pb-32 pt-24">
             <div class="bg-white w-36 h-36 flex flex-col justify-center items-center space-y-[-7px]">
-                <img src="/images/YouthComputingblanc.svg" alt="Logo" class="w-14 bg-red-500 rounded-full">
+                <img src="/images/YouthComputingblanc.svg" alt="Logo" class="w-14 bg-fuchsia rounded-full">
                 <div class="space-y-[-10px] flex flex-col items-center">
-                    <p class="text-[30px] text-blue-950 font-black ">youth</p>
-                    <p class="text-rose-500 text-[9px] ps-3 tracking-[2px] ">COMPUTING</p>
+                    <p class="text-[30px] text-bleu font-black ">youth</p>
+                    <p class="text-fuchsia text-[9px] ps-3 tracking-[2px] ">COMPUTING</p>
                 </div>
             </div>
             <div class="flex flex-col text-xl space-y-5">
@@ -110,7 +110,7 @@
               </div>
             </div>
             <div>
-                <button @click="openModal" class="hover:border-rose-500 hover:text-rose-400 duration-300 border-2 px-10 py-2 mr-20 ml-[-40px]">DONATION</button>
+                <button @click="openModal" class="hover:border-fuchsia hover:border-fuchsia duration-300 border-2 px-10 py-2 mr-20 ml-[-40px]">DONATION</button>
             </div>
         </div>
     </footer>
@@ -120,7 +120,7 @@
     <div v-if="isModalOpen" class="fixed inset-0 flex items-center justify-center z-50">
         <div class="fixed inset-0 bg-gray-500 bg-opacity-75"></div>
         <div class="bg-white rounded-xl space-y-8 overflow-hidden shadow-2xl transform transition-all sm:max-w-lg sm:w-full p-6">
-            <label class="text-5xl font-black text-bleu">Faire une <span class="text-red-500">Donation</span></label>
+            <label class="text-5xl font-black text-bleu">Faire une <span class="text-fuchsia">Donation</span></label>
             <form @submit.prevent="submitDonation" class="mt-4 space-y-8">
                 <div>
                     <input  type="text" id="title" v-model="form.title" placeholder="Entrez le titre ici..."

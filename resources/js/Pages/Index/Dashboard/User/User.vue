@@ -3,7 +3,7 @@
         <div class="p-6 rounded-lg shadow-md">
             <div class="flex justify-between items-center">
                 <h2 class="text-5xl font-black text-bleu">Utilisateur</h2>
-                <Link href="/Login/Dashboard/User/AddUser" class="px-8 py-3 text-xl font-bold bg-red-500 text-white rounded-md hover:bg-red-400">Ajouter</Link>
+                <Link href="/Login/Dashboard/User/AddUser" class="px-8 py-3 text-xl font-bold bg-fuchsia text-white rounded-md hover:scale-105 duration-300">Ajouter</Link>
             </div>
             <div v-if="$page.props.flash.message" class="text-xl text-green-800 bg-green-100 p-3 mt-5">{{ $page.props.flash.message }}</div>
             <div class="mt-6">

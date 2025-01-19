@@ -15,7 +15,7 @@
                     <textarea name="message" placeholder="Votre motif......" rows="6" cols="40" 
                             class="bg-bleu text-xl border-1 border-white rounded-lg placeholder:text-white pl-5 pt-4"></textarea>
                 </div>
-                <button class="text-xl hover:scale-105 duration-300 bg-rose-600 px-12 py-3">ENVOYER</button>
+                <button class="text-xl hover:scale-105 duration-300 bg-fuchsia px-12 py-3">ENVOYER</button>
             </div>
             <div class="bg-fuchsia p-44 rounded-r-[25px]" style="width: 100%;">
                 <img src="/images/YouthComputingblanc.svg" alt="Logo" style="width: 100%;">

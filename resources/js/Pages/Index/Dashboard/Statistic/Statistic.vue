@@ -13,19 +13,19 @@
     <DashLayout >
         <div class="p-6 rounded-lg shadow-md">
             <div class="flex justify-between items-center">
-                <h2 class="text-5xl font-black text-blue-950">Statistic</h2>
-                <Link href="/Login/Dashboard/Statistic/AddStatistic" class="px-8 py-3 text-xl font-bold bg-red-500 text-white rounded-md hover:bg-red-400">Add Statistic</Link>
+                <h2 class="text-5xl font-black text-bleu">Statistique</h2>
+                <Link href="/Login/Dashboard/Statistic/AddStatistic" class="px-8 py-3 text-xl font-bold bg-fuchsia text-white rounded-md hover:scale-105 duration-300">Ajouter</Link>
             </div>
             <div v-if="$page.props.flash.message" class="text-xl text-green-800 bg-green-100 p-3 mt-5">{{ $page.props.flash.message }}</div>
             <div class="mt-6">
                 <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-blue-800">
+                    <thead class="bg-blue-900">
                     <tr>
-                        <th class="px-6 py-3 text-left text-xl font-black text-white uppercase tracking-wider">ID</th>
-                        <th class="px-6 py-3 text-left text-xl font-black text-white uppercase tracking-wider">Nbr de la formation</th>
-                        <th class="px-6 py-3 text-left text-xl font-black text-white uppercase tracking-wider">Nbr des élèves formé</th>
-                        <th class="px-6 py-3 text-left text-xl font-black text-white uppercase tracking-wider">Nbr d'activités</th>
-                        <th class="px-6 py-3 text-left text-xl font-black text-white uppercase tracking-wider">Formations certifié</th>
+                        <th class="px-6 py-3 text-left text-xl font-black text-white tracking-wider">ID</th>
+                        <th class="px-6 py-3 text-left text-xl font-black text-white tracking-wider">Nbr de la formation</th>
+                        <th class="px-6 py-3 text-left text-xl font-black text-white tracking-wider">Nbr des élèves formé</th>
+                        <th class="px-6 py-3 text-left text-xl font-black text-white tracking-wider">Nbr d'activités</th>
+                        <th class="px-6 py-3 text-left text-xl font-black text-white tracking-wider">Formations certifié</th>
                         <th class="px-6 py-3"></th>
                     </tr>
                     </thead>
