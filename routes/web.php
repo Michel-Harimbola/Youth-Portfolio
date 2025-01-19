@@ -14,6 +14,7 @@ use App\Http\Controllers\HistoricController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\StatisticController;
 use App\Http\Controllers\RealisationController;
+use App\Http\Controllers\AppointmentController;
 use App\Models\Realisation;
 
 //Accueil
@@ -129,3 +130,12 @@ Route::post('/Login/Dashboard/Statistic', [StatisticController::class, 'AddStati
 Route::delete('/Login/Dashboard/Statistic/{statistic}', [StatisticController::class, 'destroyStatistic']);
 Route::get('/Login/Dashboard/Statistic/{statistic}/EditStatistic', [StatisticController::class, 'EditStatistic']);
 Route::put('/Login/Dashboard/Statistic/{statistic}', [StatisticController::class, 'updateStatistic']);
+
+
+//Appointment 
+Route::get('/Login/Dashboard/Appointment', [AppointmentController::class, 'loadAllAppointment'])->name('Appointment.index');
+Route::get('/Login/Dashboard/Appointment/AddAppointment', [AppointmentController::class, 'AppointmentForm']);
+Route::post('/Login/Dashboard/Appointment', [AppointmentController::class, 'AddAppointment']);
+Route::delete('/Login/Dashboard/Appointment/{appointment}', [AppointmentController::class, 'destroyAppointment']);
+Route::get('/Login/Dashboard/Appointment/{appointment}/EditAppointment', [AppointmentController::class, 'EditAppointment']);
+Route::put('/Login/Dashboard/Appointment/{appointment}', [AppointmentController::class, 'updateAppointment']);

@@ -3,7 +3,7 @@
       <div>
         <div class="flex flex-col justify-center items-center gap-5 h-32">
           <div class="align-self-start">
-            <h1 class="text-5xl text-rose-500 font-black">Questions fréquemment posées(FAQ)</h1>
+            <h1 class="text-5xl text-fuchsia font-black">Questions fréquemment posées(FAQ)</h1>
           </div>
         </div>
       </div>
@@ -11,7 +11,7 @@
       <div class="flex flex-col space-y-5 mx-20">
         <div v-for="(faq, index) in faqs" :key="faq.id" class="flex justify-between items-center border-gray-300 border-t-2">
           <div class="flex flex-col">
-            <h1 class="text-3xl text-blue-950 pt-6 pb-2 font-black">{{ faq.question }}</h1>
+            <h1 class="text-3xl text-bleu pt-6 pb-2 font-black">{{ faq.question }}</h1>
             <p v-if="isVisible[index]" class="text-gray-700 ml-3 text-xl">{{ faq.answer }}</p>
           </div>
           <button

@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center  pl-20  pb-12 pt-64"> 
        <div class="container flex flex-col justify-between">
-           <h1 class="text-5xl font-black font pb-6"><span class="text-blue-950">YOUTH</span> <span class="text-rose-500">COMPUTING</span></h1>
+           <h1 class="text-5xl font-black font pb-6"><span class="text-bleu">YOUTH</span> <span class="text-fuchsia">COMPUTING</span></h1>
            <div class="flex items-center pb-7 ">
                  <div class="space-y-5 text-xl">
                      <p>
@@ -36,8 +36,8 @@
                 </button>
            </div> 
            <div class="flex gap-x-6">
-               <button @click="scrollToSecondPage" class="hover:bg-blue-800 hover:scale-105 duration-300 bg-blue-950 text-white text-xl font-bold py-3 px-14">DECOUVRIR</button>
-               <Link href="/Donation" class="hover:bg-rose-500 hover:scale-105 duration-300 bg-rose-600 text-white text-xl font-bold py-3 px-14">DONATION</Link>
+               <button @click="scrollToSecondPage" class="hover:scale-105 duration-300 bg-bleu text-white text-xl font-bold py-3 px-14">DECOUVRIR</button>
+               <Link href="/Donation" class="hover:scale-105 duration-300 bg-fuchsia text-white text-xl font-bold py-3 px-14">DONATION</Link>
            </div>
        </div>
        <div style="width:70%;" class="mr-28 ">

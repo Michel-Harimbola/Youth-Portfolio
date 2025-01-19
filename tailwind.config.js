@@ -18,6 +18,10 @@ export default {
                 sans: ['Inter', ...defaultTheme.fontFamily.sans],  // Inter par défaut
                 ubuntu: ['Ubuntu', 'sans-serif'],                  // Ubuntu pour les titres
             },
+            colors: {
+                bleu: '#010b40',
+                fuchsia: '#f13544',
+            },
         },
     },
 
