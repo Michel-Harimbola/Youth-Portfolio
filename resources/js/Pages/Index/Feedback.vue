@@ -5,7 +5,7 @@
            n'hésitez pas à vous exprimer ci-dessous. Voutre feedback est précieux et nous aide à améliorer nos services et à mieux répondre à vos attentes.<br>
            Nous vous remercions de prendre le temps de partager vos réflexions aven nous.</p>
         <div class="flex justify-end mr-20 mb-3">
-            <button @click="openModal" class="hover:scale-105 duration-300 bg-rose-600 text-xl text-white font-bold px-6 py-2 mb-3">Ajouter une feedback</button>
+            <button @click="openModal" class="hover:scale-105 duration-300 bg-rose-600 text-xl text-white font-bold px-6 py-2 mb-3">Ajouter</button>
         </div>
         <div v-for="(feedback, index) in feedbacks" class="text-xl flex justify-between items-center border-t-2 border-gray-300 mx-20 pt-5 mb-6">
             <div>
@@ -30,7 +30,7 @@
     <div v-if="isModalOpen" class="fixed inset-0 flex items-center justify-center z-50">
         <div class="fixed inset-0 bg-gray-500 bg-opacity-75"></div>
         <div class="bg-white rounded-xl overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full p-6">
-            <h1 class="text-5xl font-bold text-bleu mb-8">Ajout<span class="text-fuchsia">Feedback</span></h1>
+            <h1 class="text-5xl font-bold text-bleu mb-8">Faire une <span class="text-fuchsia">Feedback</span></h1>
             <form @submit.prevent="submitFeedback" class="text-xl space-y-8">
                 <div class="flex flex-col">
                     <div class="relative flex items-center">
@@ -44,8 +44,8 @@
                     <textarea rows="6" class="rounded-lg border-2" v-model="form.description" placeholder="Votre feedback" required></textarea>
                 </div>
                 <div class="flex justify-end mt-5">
-                    <button @click="closeModal" type="button" class="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-700 mr-2">Annuler</button>
-                    <button type="submit" class="font-bold text-white rounded-lg bg-fuchsia px-6 py-1">Ajouter</button>
+                    <button @click="closeModal" type="button" class="px-4 py-2 bg-gray-500 text-white rounded-md hover:scale-105 duration-300 mr-2">Annuler</button>
+                    <button type="submit" class="font-bold text-white rounded-lg bg-fuchsia hover:scale-105 duration-300 px-6 py-1">Ajouter</button>
                 </div>
             </form>
         </div>

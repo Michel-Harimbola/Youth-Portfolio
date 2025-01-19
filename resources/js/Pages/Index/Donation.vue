@@ -22,7 +22,7 @@
     </div>
     <div class="flex justify-center items-center h-screen bg-gray-100">
         <div class="bg-white rounded-xl space-y-8 overflow-hidden shadow-2xl transform transition-all sm:max-w-lg sm:w-full p-6">
-            <label class="text-5xl font-black text-blue-800">Faire une <span class="text-red-500">Donation</span></label>
+            <label class="text-5xl font-black text-bleu">Faire une <span class="text-red-500">Donation</span></label>
             <form @submit.prevent="submit" class="mt-4 space-y-8">
                 <div>
                     <input  type="text" id="title" v-model="form.title" placeholder="Entrez le titre ici..."
@@ -41,8 +41,8 @@
                     class="mt-1 block w-full p-3 border-2  rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 placeholder:text-gray-400" required>
                 </div>
                 <div class="flex justify-end mt-4 space-x-3">
-                    <Link href="/" type="submit" class=" text-2xl font-bold px-4 py-2 bg-gray-400 text-white rounded-lg hover:scale-105 duration-300">Annuler</Link>
-                    <button type="submit" class=" text-2xl font-bold px-5 py-2 bg-blue-700 text-white rounded-lg hover:scale-105 duration-300">Ajouter</button>
+                    <Link href="/" type="submit" class=" text-2xl font-bold px-4 py-2 bg-gray-500 text-white rounded-lg hover:scale-105 duration-300">Annuler</Link>
+                    <button type="submit" class=" text-2xl font-bold px-5 py-2 bg-fuchsia text-white rounded-lg hover:scale-105 duration-300">Ajouter</button>
                 </div>
             </form>
         </div>
@@ -51,6 +51,6 @@
 
 <script>
     export default {
-        name: "AddFAQ"
+        name: "AddDonation"
     }
 </script>

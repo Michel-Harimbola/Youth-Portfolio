@@ -28,12 +28,9 @@ class DonationController extends Controller
             'title' => 'required|string',
             'description' => 'required|string',
             'amount' => 'required|integer',
-            'amount_received' => 'required|integer',
         ]);
 
         Donation::create($validated);
-
-        return redirect('/');
     }
 
     public function AddDonation(Request $request) {
@@ -42,7 +39,6 @@ class DonationController extends Controller
             'title' => 'required|string',
             'description' => 'required|string',
             'amount' => 'required|integer',
-            'amount_received' => 'required|integer',
         ]);
 
         Donation::create($validated);

@@ -10,5 +10,5 @@ class Donation extends Model
     use HasFactory;
   
     protected $table = 'Donation';
-    protected $fillable = ['title', 'description', 'amount', 'amount_received'];
+    protected $fillable = ['title', 'description', 'amount'];
 }

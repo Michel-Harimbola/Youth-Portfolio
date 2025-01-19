@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->integer('amount');
-            $table->integer('amount_received');
             $table->timestamps();
         });
     }

@@ -110,14 +110,42 @@
               </div>
             </div>
             <div>
-                <Link href="/Donation"class="hover:border-rose-500 hover:text-rose-400 duration-300 border-2 px-10 py-2 mr-20 ml-[-40px]">DONATION</Link>
+                <button @click="openModal" class="hover:border-rose-500 hover:text-rose-400 duration-300 border-2 px-10 py-2 mr-20 ml-[-40px]">DONATION</button>
             </div>
         </div>
     </footer>
+
+    <!-- add donation -->
+
+    <div v-if="isModalOpen" class="fixed inset-0 flex items-center justify-center z-50">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75"></div>
+        <div class="bg-white rounded-xl space-y-8 overflow-hidden shadow-2xl transform transition-all sm:max-w-lg sm:w-full p-6">
+            <label class="text-5xl font-black text-bleu">Faire une <span class="text-red-500">Donation</span></label>
+            <form @submit.prevent="submitDonation" class="mt-4 space-y-8">
+                <div>
+                    <input  type="text" id="title" v-model="form.title" placeholder="Entrez le titre ici..."
+                    class="mt-1 block w-full p-3 border-2  rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 placeholder:text-gray-400" required>
+                </div>
+                <div>
+                    <textarea type="text" id="description" v-model="form.description" placeholder="Description..." rows="4"
+                    class="mt-1 block w-full p-3 border-2  rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 placeholder:text-gray-400" required></textarea>
+                </div>
+                <div>
+                    <input  type="text" id="amount" v-model="form.amount" placeholder="Amount..."
+                    class="mt-1 block w-full p-3 border-2  rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 placeholder:text-gray-400" required>
+                </div>
+                <div class="flex justify-end mt-4 space-x-3">
+                    <button @click="closeModal" type="submit" class=" text-2xl font-bold px-4 py-2 bg-gray-500 text-white rounded-lg hover:scale-105 duration-300">Annuler</button>
+                    <button type="submit" class=" text-2xl font-bold px-5 py-2 bg-fuchsia text-white rounded-lg hover:scale-105 duration-300">Ajouter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
 </template>
 
 <script setup>
-import { Link } from '@inertiajs/vue3';
+import { Link, useForm } from '@inertiajs/vue3';
 </script>
 
 <script>
@@ -129,6 +157,13 @@ export default {
   data() {
     return {
       isScrolled: false,
+      isModalOpen: false,
+      form: useForm({
+          title:'',
+          description:'',
+          amount:'',
+          amount_received:'',
+      }),
     };
   },
   computed: {
@@ -144,6 +179,24 @@ export default {
     handleScroll() {
       this.isScrolled = window.scrollY > 0; // Change l'état de la navbar
     },
+
+    openModal() {
+                this.isModalOpen = true;
+            },
+
+            closeModal() {
+                this.isModalOpen = false;
+            },
+
+            async submitDonation() {
+                this.form.post('/Donation', {
+                    onSuccess: () => {
+                        this.closeModal();
+                        this.form.reset();
+                    }
+                });
+            },
+
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);

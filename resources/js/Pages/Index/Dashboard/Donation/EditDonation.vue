@@ -10,7 +10,6 @@
         title:props.donation.title,
         description:props.donation.description,
         amount:props.donation.amount,
-        amount_received:props.donation.amount_received,
     })
 
     function submit(id){
@@ -42,12 +41,6 @@
                     <input  type="text" id="amount" v-model="form.amount" 
                     class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                     <div class=" text-red-500 text-2xl" v-if="errors.amount">{{ errors.amount }}</div>
-                </div>
-                <div>
-                    <label class="block text-2xl font-medium">Amount Received</label>
-                    <input  type="text" id="amount_received" v-model="form.amount_received"
-                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                    <div class=" text-red-500 text-2xl" v-if="errors.amount_received">{{ errors.amount_received }}</div>
                 </div>
                 <div class="flex justify-end mt-4">
                     <button type="submit" class="text-2xl font-bold px-6 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-600">Edit</button>

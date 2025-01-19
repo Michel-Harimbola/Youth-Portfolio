@@ -111,8 +111,8 @@ Route::put('/Login/Dashboard/Realisation/{Realisation}', [RealisationController:
 
 
 //Donation sur l'Accueil
-Route::get('/Donation', [DonationController::class, 'Donation']);
-Route::post('/Donation/AddDonation', [DonationController::class, 'AddDonations']);
+Route::post('/Donation', [DonationController::class, 'AddDonations']);
+// Route::post('/Donation/AddDonation', [DonationController::class, 'AddDonations']);
 
 //Donation 
 Route::get('/Login/Dashboard/Donation', [DonationController::class, 'loadAllDonation'])->name('Donation.index');

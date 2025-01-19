@@ -25,7 +25,6 @@
                         <th class="px-6 py-3 text-left text-xl font-black text-white uppercase tracking-wider">Title</th>
                         <th class="px-6 py-3 text-left text-xl font-black text-white uppercase tracking-wider">Description</th>
                         <th class="px-6 py-3 text-left text-xl font-black text-white uppercase tracking-wider">Amount</th>
-                        <th class="px-6 py-3 text-left text-xl font-black text-white uppercase tracking-wider">Amount Received</th>
                         <th class="px-6 py-3"></th>
                     </tr>
                     </thead>
@@ -35,7 +34,6 @@
                         <td class="px-6 py-4 whitespace-nowrap text-gray-500 max-w-96 overflow-hidden">{{ Donation.title }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-gray-500 max-w-96 overflow-hidden">{{ Donation.description }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-gray-500 max-w-96 overflow-hidden">{{ Donation.amount }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-gray-500 max-w-96 overflow-hidden">{{ Donation.amount_received }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-right  font-medium">
                         <div class="space-x-5 flex items-center justify-end">
                             <button @click.prevent="edit(Donation.id)"
