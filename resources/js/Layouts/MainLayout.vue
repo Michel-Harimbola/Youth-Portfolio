@@ -19,7 +19,7 @@
                       <Link href="" class="cursor-pointer">Communautés Y2C</Link>
                     </li>
                     <li class="hover:scale-110 duration-300 py-1 hover:text-fuchsia">
-                      <Link href="" class="cursor-pointer">A propos</Link>
+                      <Link href="/Apropos" class="cursor-pointer">A propos</Link>
                     </li>
                     <div class="hover:scale-105 duration-300 -mr-3">
                         <Link href="/Login"class="bg-fuchsia text-white font-bold px-9 py-3 cursor-pointer">Connexion</Link>
@@ -103,6 +103,16 @@
                     <li class="hover:scale-110 duration-300">
                       <div v-if="contact.contact_type.toLowerCase() == 'whatsapp'.toLowerCase()" >
                         <Link><img src="images/Contact/whatsapp.svg" alt="whatsapp" class="w-12 cursor-pointer"></Link>
+                      </div>
+                    </li>
+                    <li class="hover:scale-110 duration-300">
+                      <div v-if="contact.contact_type.toLowerCase() == 'linkedin'.toLowerCase()" >
+                        <Link><img src="images/Contact/linkedin.svg" alt="linkedin" class="w-12 cursor-pointer"></Link>
+                      </div>
+                    </li>
+                    <li class="hover:scale-110 duration-300">
+                      <div v-if="contact.contact_type.toLowerCase() == 'youtube'.toLowerCase()" >
+                        <Link><img src="images/Contact/youtube.svg" alt="youtube" class="w-12 cursor-pointer"></Link>
                       </div>
                     </li>
                   </ul>

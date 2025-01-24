@@ -15,6 +15,8 @@ use App\Http\Controllers\LocationController;
 use App\Http\Controllers\StatisticController;
 use App\Http\Controllers\RealisationController;
 use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\AproposController;
+use App\Http\Controllers\TeamController;
 use App\Models\Realisation;
 
 //Accueil
@@ -33,6 +35,9 @@ Route::middleware('auth')->group(function(){
 
 //Logout
 Route::post('/Logout', [LoginController::class, 'logout'])->middleware('auth');
+
+//A propos
+Route::get('/Apropos', [AproposController::class, 'AproposView']);
 
 
 //User 
@@ -139,3 +144,14 @@ Route::post('/Login/Dashboard/Appointment', [AppointmentController::class, 'AddA
 Route::delete('/Login/Dashboard/Appointment/{appointment}', [AppointmentController::class, 'destroyAppointment']);
 Route::get('/Login/Dashboard/Appointment/{appointment}/EditAppointment', [AppointmentController::class, 'EditAppointment']);
 Route::put('/Login/Dashboard/Appointment/{appointment}', [AppointmentController::class, 'updateAppointment']);
+
+Route::post('/Appointment', [AppointmentController::class, 'AddAccueil']);
+
+
+//Team 
+Route::get('/Login/Dashboard/Team', [TeamController::class, 'loadAllTeam'])->name('Team.index');
+Route::get('/Login/Dashboard/Team/AddTeam', [TeamController::class, 'TeamForm']);
+Route::post('/Login/Dashboard/Team', [TeamController::class, 'AddTeam']);
+Route::delete('/Login/Dashboard/Team/{team}', [TeamController::class, 'destroyTeam']);
+Route::get('/Login/Dashboard/Team/{team}/EditTeam', [TeamController::class, 'EditTeam']);
+Route::put('/Login/Dashboard/Team/{team}', [TeamController::class, 'updateTeam']);

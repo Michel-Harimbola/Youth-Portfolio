@@ -30,6 +30,17 @@ class AppointmentController extends Controller
         return Redirect::route('Appointment.index')->with('message', 'Appointment created succesfully');
     }
 
+    public function AddAccueil(Request $request) {
+        $validated = $request->validate([
+            'authentification' => 'required|string',
+            'datetime' => 'required|date',
+            'motif' => 'required|string',
+        ]);
+
+        Appointment::create($validated);
+
+    }
+
     public function destroyAppointment(Appointment $Appointment){
         $Appointment->delete();
         return Redirect::route('Appointment.index')->with('message', 'Appointment deleted succesfully');

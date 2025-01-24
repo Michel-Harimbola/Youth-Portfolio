@@ -13,9 +13,6 @@
                 <Project :statistic="statistic" />
             </div>
             <div>
-                <Notre_Equipe />
-            </div>
-            <div>
                <FAQ :faqs="faqs" />
             </div>
             <div>
@@ -39,7 +36,6 @@ import Accueil from './Accueil.vue';
 import Presentation from './Presentation.vue';
 import Vision from './Vision.vue';
 import Project from './Project.vue';
-import Notre_Equipe from './Notre_Equipe.vue';
 import FAQ from './FAQ.vue';
 import Partner from './Partner.vue';
 import Realisation from './Realisation.vue';
@@ -65,7 +61,6 @@ export default {
         Presentation,
         Vision,
         Project,
-        Notre_Equipe,
         FAQ,
         Partner,
         Realisation,
