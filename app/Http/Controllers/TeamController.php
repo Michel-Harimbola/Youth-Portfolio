@@ -10,7 +10,7 @@ use Inertia\Inertia;
 class TeamController extends Controller
 {
     public function loadAllTeam() {
-        $all_Team = Team::all();
+        $all_Team = Team::limit(8)->get();
         return Inertia::render('Index/Dashboard/Team/Team',['all_team' => $all_Team]);
     }
 

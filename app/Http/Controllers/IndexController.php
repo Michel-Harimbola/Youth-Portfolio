@@ -10,6 +10,7 @@ use App\Models\Location;
 use App\Models\Partner;
 use App\Models\Realisation;
 use App\Models\Statistic;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller

@@ -1,6 +1,6 @@
 <template>
     <div class="mt-12">
-        <Notre_Equipe /> 
+        <Notre_Equipe :Teams="Teams" /> 
     </div>
     <div class="flex items-cente h-20 ml-20">
        <div class="bg-fuchsia w-3"></div>
@@ -29,6 +29,7 @@
 
         props: {
             Historics: Array,
+            Teams: Array,
         }
     };
 </script>
