@@ -13,7 +13,7 @@ use function Termwind\render;
 class FeedBackController extends Controller
 {
     public function loadAllFeedback() {
-        $all_feedback = FeedBack::all();
+        $all_feedback = FeedBack::limit(8)->get();
         return Inertia::render('Index/Dashboard/FeedBack/Feedback', ['all_feedback' => $all_feedback]);
     }
 

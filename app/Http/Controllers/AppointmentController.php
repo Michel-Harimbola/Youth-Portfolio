@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 class AppointmentController extends Controller
 {
     public function loadAllAppointment() {
-        $all_appointment = Appointment::all();
+        $all_appointment = Appointment::limit(8)->get();
         return Inertia::render('Index/Dashboard/Appointment/Appointment', ['all_appointment' => $all_appointment]);
     }
 

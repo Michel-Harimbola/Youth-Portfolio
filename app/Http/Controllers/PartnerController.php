@@ -10,7 +10,7 @@ use Inertia\Inertia;
 class PartnerController extends Controller
 {
     public function loadAllPartner() {
-        $all_partner = Partner::all();
+        $all_partner = Partner::limit(8)->get();
         return Inertia::render('Index/Dashboard/Partner/Partner',['all_partner' => $all_partner]);
     }
 

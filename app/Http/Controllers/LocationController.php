@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 class LocationController extends Controller
 {
     public function loadAllLocation() {
-        $all_location = Location::all();
+        $all_location = Location::limit(8)->get();
         return Inertia::render('Index/Dashboard/Location/Location', ['all_location' => $all_location]);
     }
 

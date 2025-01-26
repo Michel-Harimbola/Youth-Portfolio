@@ -1,6 +1,6 @@
 
 <script setup>
-    import { useForm } from '@inertiajs/vue3';
+    import { useForm } from '@inertiajs/inertia-vue3';
 
     defineProps({
         errors:Object
@@ -8,15 +8,15 @@
 
     const form = useForm({
         name:'',
-        post:'',
-        images:null,
+        role:'',
+        image:null,
     });
 
     function handleFileUpload(event){
-        form.images = event.target.files[0];
+        form.image = event.target.files[0];
     }
 
-    function submit(){
+    const submit = () => {
         form.post('/Login/Dashboard/Team');
     }
 </script>
@@ -35,15 +35,15 @@
                 </div>
                 <div>
                     <label class="block text-2xl font-medium">Poste</label>
-                    <input  type="text" id="post" v-model="form.post"
+                    <input  type="text" id="role" v-model="form.role"
                     class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 ">
-                    <div class=" text-fuchsia text-2xl" v-if="errors.post">{{ errors.post }}</div>
+                    <div class=" text-fuchsia text-2xl" v-if="errors.role">{{ errors.role }}</div>
                 </div>
                 <div>
                     <label class="block text-2xl font-medium">Images</label>
-                    <input  type="file" name="images" @change="handleFileUpload"
+                    <input  type="file" name="image" @change="handleFileUpload"
                     class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 ">
-                    <div class=" text-fuchsia text-2xl" v-if="errors.images">{{ errors.images }}</div>
+                    <div class=" text-fuchsia text-2xl" v-if="errors.image">{{ errors.image }}</div>
                 </div>
                 <div class="flex justify-end mt-4 space-x-2">
                     <Link href="/Login/Dashboard/Team" type="submit" class="px-6 py-2 bg-gray-500 text-white text-xl font-bold rounded-md hover:scale-105 duration-300">Annuler</Link>

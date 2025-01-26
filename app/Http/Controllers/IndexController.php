@@ -16,11 +16,11 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $faqs = FAQ::all();
+        $faqs = FAQ::limit(4)->get();
         $location = Location::first();
         $contact = Contact::all();
-        $feedback = FeedBack::all();
-        $partner = Partner::all();
+        $feedback = FeedBack::limit(4)->get();
+        $partner = Partner::limit(6)->get();
         $statistic = Statistic::first();
         $realisation = Realisation::limit(3)->get();
 

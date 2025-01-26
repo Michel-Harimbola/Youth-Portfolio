@@ -33,9 +33,9 @@
                     <tr v-for="Team in all_team" :key="Team.id">
                         <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">{{ Team.id }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-gray-500 max-w-96 overflow-hidden">{{ Team.name }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-gray-500 max-w-96 overflow-hidden">{{ Team.post }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-gray-500 max-w-96 overflow-hidden">{{ Team.role }}</td>
                         <div class="flex justify-start mt-5 ml-5">
-                            <img :src="`/storage/${Team.images}`" alt="logo" class="w-12">
+                            <img :src="`/storage/${Team.image}`" alt="logo" class="w-12">
                         </div>
                         <td class="px-6 py-4 whitespace-nowrap text-right  font-medium">
                         <div class="space-x-5 flex items-center justify-end">

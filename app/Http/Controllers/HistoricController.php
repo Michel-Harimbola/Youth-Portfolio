@@ -9,8 +9,13 @@ use Illuminate\Support\Facades\Redirect;
 
 class HistoricController extends Controller
 {
+    public function Historic() {
+        $all_Historic = Historic::limit(6)->get();
+        return Inertia::render('Index/Historic',['all_Historic' => $all_Historic]);
+    }
+
     public function loadAllHistoric() {
-        $all_Historic = Historic::all();
+        $all_Historic = Historic::limit(8)->get();
         return Inertia::render('Index/Dashboard/Historic/Historic',['all_Historic' => $all_Historic]);
     }
 

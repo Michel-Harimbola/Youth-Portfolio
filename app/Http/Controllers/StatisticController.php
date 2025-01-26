@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 class StatisticController extends Controller
 {
     public function loadAllStatistic() {
-        $all_Statistic = Statistic::all();
+        $all_Statistic = Statistic::limit(8)->get();
         return Inertia::render('Index/Dashboard/Statistic/Statistic', ['all_Statistic' => $all_Statistic]);
     }
 

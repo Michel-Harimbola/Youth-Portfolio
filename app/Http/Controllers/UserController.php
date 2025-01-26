@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 class UserController extends Controller
 {
     public function loadAllUser() {
-        $all_user = User::all();
+        $all_user = User::limit(8)->get();
         return Inertia::render('Index/Dashboard/User/User', ['all_user' => $all_user]);
     }
 

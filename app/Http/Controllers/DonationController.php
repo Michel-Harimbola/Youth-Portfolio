@@ -15,7 +15,7 @@ class DonationController extends Controller
     }
 
     public function loadAllDonation() {
-        $all_donation = Donation::all();
+        $all_donation = Donation::limit(8)->get();
         return Inertia::render('Index/Dashboard/Donation/Donation', ['all_donation'=>$all_donation]);
     }
 

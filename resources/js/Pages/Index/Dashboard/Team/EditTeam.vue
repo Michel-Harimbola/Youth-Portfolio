@@ -8,11 +8,11 @@
 
     const form = useForm({
         name:props.team.name,
-        post:props.team.post,
+        role:props.team.role,
     })
 
     function submit(id){
-        router.put('/Login/Dashboard/Partner/'+id, form)
+        router.put('/Login/Dashboard/Team/'+id, form)
     }
     
 </script>
@@ -29,9 +29,15 @@
                     class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                     <div class=" text-fuchsia text-2xl" v-if="errors.name">{{ errors.name }}</div>
                 </div>
+                <div>
+                    <label class="block text-2xl font-medium">Poste</label>
+                    <input  type="text" id="role" v-model="form.role" 
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    <div class=" text-fuchsia text-2xl" v-if="errors.role">{{ errors.role }}</div>
+                </div>
                 <div class="flex justify-end mt-4 space-x-2">
-                    <Link href="/Login/Dashboard/Partner" type="submit" class="px-6 py-2 bg-gray-500 text-white text-xl font-bold rounded-md hover:scale-105 duration-300">Annuler</Link>
-                    <button type="submit" class="text-xl font-bold px-6 py-2 bg-bleu text-white rounded-md hover:scale-105 duration-300">Modifier</button>
+                    <Link href="/Login/Dashboard/Team" type="submit" class="px-6 py-2 bg-gray-500 text-white text-xl font-bold rounded-md hover:scale-105 duration-300">Annuler</Link>
+                    <button type="submit" class="text-xl font-bold px-6 py-2 bg-fuchsia text-white rounded-md hover:scale-105 duration-300">Modifier</button>
                 </div>
             </form>
         </div>

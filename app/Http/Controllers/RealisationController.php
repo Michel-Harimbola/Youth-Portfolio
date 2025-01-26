@@ -15,7 +15,7 @@ class RealisationController extends Controller
     }
 
     public function loadAllRealisation() {
-        $all_Realisation = Realisation::all();
+        $all_Realisation = Realisation::limit(8)->get();
         return Inertia::render('Index/Dashboard/Realisation/Realisation',['all_Realisation' => $all_Realisation]);
     }
 

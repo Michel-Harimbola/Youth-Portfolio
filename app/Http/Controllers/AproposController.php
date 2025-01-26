@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Historic;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class AproposController extends Controller
 {
     public function AproposView() {
-        return Inertia::render('Index/Apropos');
+        $historic = Historic::limit(6)->get();
+
+        return Inertia::render('Index/Apropos', ['Historics' => $historic,]);
     }
 }

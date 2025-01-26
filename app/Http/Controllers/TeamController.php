@@ -20,24 +20,25 @@ class TeamController extends Controller
 
     public function AddTeam(Request $request) {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'post' => 'required|string|max:255',
-            'images' => 'required|image|mimetypes:image/jpeg,image/png,image/jpg,image/svg+xml|max:2048',
+            'name' => 'required|string',
+            'role' => 'required|string',
+            'image' => 'required|image|mimetypes:image/jpeg,image/png,image/jpg,image/svg+xml',
         ]);
 
-        if($request->hasFile('images')) {
-            $imagePath = $request->file('images')->store('Team', 'public');
+        if($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('Team', 'public');
         } else {
-            return back()->withErrors(['images' => "L'image n'a pas été téléchargée"]);
+            return back()->withErrors(['image' => "L'image n'a pas été téléchargée"]);
         }
         
-
         Team::create([
             'name' => $request->name,
-            'post' => $request->post,
-            'images' => $imagePath,
+            'role' => $request->role,
+            'image' => $imagePath,
         ]);
 
+        // return dd('Redirection test');
+        // return Redirect::route('Team.index');
         return Redirect::route('Team.index')->with('message', 'Team created succesfully');
     }
 
@@ -48,14 +49,14 @@ class TeamController extends Controller
 
     public function EditTeam(Team $Team){
         return Inertia::render('Index/Dashboard/Team/EditTeam', [
-            'Team' => $Team
+            'team' => $Team
         ]);
     }
 
     public function updateTeam(Request $request, Team $Team){
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'post' => 'required|string|max:255',
+            'name' => 'required|string',
+            'role' => 'required|string',
         ]);
 
         $Team->update($validated);

@@ -12,7 +12,7 @@ use function PHPSTORM_META\type;
 class ContactController extends Controller
 {
     public function loadAllContact() {
-        $all_contact = Contact::all();
+        $all_contact = Contact::limit(8)->get();
         return Inertia::render('Index/Dashboard/Contact/Contact', ['all_contact' => $all_contact]);
     }
 

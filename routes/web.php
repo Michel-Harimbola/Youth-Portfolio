@@ -58,6 +58,8 @@ Route::get('/Login/Dashboard/FAQ/{faq}/EditFAQ', [FAQController::class, 'EditFAQ
 Route::put('/Login/Dashboard/FAQ/{faq}', [FAQController::class, 'updateFAQ']);
 
 
+Route::get('/Historic', [HistoricController::class, 'Historic']);
+
 //Historic
 Route::get('/Login/Dashboard/Historic', [HistoricController::class, 'loadAllHistoric'])->name('Historic.index');
 Route::get('/Login/Dashboard/Historic/AddHistoric', [HistoricController::class, 'HistoricForm']);

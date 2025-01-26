@@ -9,7 +9,7 @@
             </div>
             <div class="flex justify-between items-center">
                 <div v-for="partner in partners" :key="partner.id">
-                    <img :src="`/storage/${partner.images}`">
+                    <img :src="`/storage/${partner.images}`" alt="Image">
                 </div>
             </div>
         </div>

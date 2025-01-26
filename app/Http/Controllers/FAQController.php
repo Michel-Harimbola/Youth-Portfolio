@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 class FAQController extends Controller
 {
     public function loadAllFAQ() {
-        $all_faq = FAQ::all();
+        $all_faq = FAQ::limit(8)->get();
         return Inertia::render('Index/Dashboard/FAQ/FAQ', ['all_faq' => $all_faq]);
     }
 
